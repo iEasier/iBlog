@@ -6,6 +6,10 @@ import { LoginService } from '../../service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  private areas = ['安徽省', '江苏省'];
+  private isRight: Boolean = false;
+  private tips: String = 'you input is not right !';
+  private needHelp: Boolean = false;
   constructor(
     private loginService: LoginService) {
 
@@ -13,8 +17,17 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
 
+
   }
-  onclick() {
-    this.loginService.getLogin();
+  showHelp() {
+    this.needHelp = true;
+  }
+  checkName() {
+    this.needHelp = false;
+  }
+  Login() {
+    const password = $('#password').val();
+    console.log(password);
+    // this.loginService.getLogin();
   }
 }

@@ -1,4 +1,20 @@
-body{
-    margin: 0;
-    padding: 0;
-}
+/*全局CSS设置*/
+/*1、清除所有的标记的内外边距*/
+    body,ul,li,a,img,p,input{ margin:0; padding:0; }
+/*2、去除项目符号或编号前面的符号*/
+    ul,ol,li{ list-style:none; }
+/*3、全局链接效果*/
+    a:link , a:visited{color:#444;text-decoration:none;}
+    a:hover{color:red;}
+/*4、网页中所有的文字大小颜色*/
+    body{ font-size:12px; font-family:宋体; color:#ccc; }
+/*5、去除图片的链接边框线，兼容模式下的考虑*/
+    img{border:0;}
+/*6、全局的类样式*/
+    .floatL{ float:left; }
+    .floatR{ float:right; }
+    .clear{clear:both;}
+    .blank10{ height:10px; clear:both; }
+/*7、空白div获得上下的距离*/
+    .red{ color:red; }
+    .blue{ color:blue; }
