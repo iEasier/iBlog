@@ -1,3 +1,8 @@
 <main class="main">
-  <app-home></app-home>
+  <!--<div class="welcome" *ngIf="!isGoHome">
+    <app-welcome (goHome)="onGoHome($event)"></app-welcome>
+  </div>-->
+  <div class="home" *ngIf="!isGoHome">
+    <app-home></app-home>
+  </div>
 </main>

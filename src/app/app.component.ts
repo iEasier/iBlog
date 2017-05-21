@@ -7,6 +7,7 @@ import { TranslateService } from 'ng2-translate';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  private isGoHome: Boolean = false;
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['zh', 'cn']);
     this.translate.setDefaultLang('zh');
@@ -15,5 +16,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
 
   }
-
+  onGoHome(isGoHome: Boolean) {
+    this.isGoHome = isGoHome;
+  }
 }

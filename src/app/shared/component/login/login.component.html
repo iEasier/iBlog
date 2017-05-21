@@ -1,21 +1,17 @@
 <div class="login">
-    <form class="form-group" (submit)="Login($event)">
-        <div class="container">
-            <div class="form-group has-success" [ngClass]="{'form-group has-error':isRight}">
-                <label class="control-label" for="inputWarning1">{{tips}}</label>
-                <input type="password" class="form-control" id="inputWarning1" (blur)="checkName($event)" (focus)="showHelp($event)">
-                <span id="helpBlock2" class="help-block" *ngIf="needHelp">{{'userLogin.userLogin' |translate}}</span>
+    <img src="../assets/image/login.jpg" class="img-rounded" width="400px" height="600px">
+    <div class="from">
+        <form class="form-group" (submit)="Login($event)">
+            <div class="form-group has-success" [ngClass]="{'form-group has-error':isRight}" id="name">
+                <label class="control-label">{{tips}}</label>
+                <input type="username" class="form-control" id="username" (blur)="checkName($event)" (focus)="showHelp($event)">
             </div>
-            <div class="form-group has-warning">
-                <label class="control-label" for="inputWarning1">Input with warning</label>
+            <div class="form-group has-success" [ngClass]="{'form-group has-error':isRight}" id="pw">
+                <label class="control-label">请输入密码：</label>
                 <input type="password" class="form-control" id="password">
             </div>
-            <div class="form-group has-error">
-                <label class="control-label" for="inputError1">Input with error</label>
-                <input type="text" class="form-control" id="inputError1">
-            </div>
-            <button type="submit" >登陆</button>
-        </div>
-    </form>
-    <app-setting></app-setting>
+            <button type="reset" class="btn btn-success" id="reset">重置</button>
+            <button type="submit" class="btn btn-success" id="submit">登陆</button>
+        </form>
+    </div>
 </div>

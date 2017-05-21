@@ -10,6 +10,7 @@ import { HomeComponent } from './shared/component/home/home.component';
 import { NavComponent } from './shared/component/nav/nav.component';
 import { LoginService } from './shared/service';
 import { SettingComponent } from './shared/component/setting/setting.component';
+import { WelcomeComponent } from './shared/component/welcome/welcome.component';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -22,7 +23,8 @@ export function createTranslateLoader(http: Http) {
     NavComponent,
     NavComponent,
     NavComponent,
-    SettingComponent
+    SettingComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

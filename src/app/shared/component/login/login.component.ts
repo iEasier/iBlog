@@ -8,7 +8,7 @@ import { LoginService } from '../../service';
 export class LoginComponent implements OnInit {
   private areas = ['安徽省', '江苏省'];
   private isRight: Boolean = false;
-  private tips: String = 'you input is not right !';
+  private tips: String = '用户名';
   private needHelp: Boolean = false;
   constructor(
     private loginService: LoginService) {

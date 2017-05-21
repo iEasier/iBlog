@@ -1,0 +1,29 @@
+.login{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#name{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 230px;
+}
+#pw{
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    width: 230px;
+}
+#reset{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 100px; 
+}
+#submit{
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    width: 100px;  
+}

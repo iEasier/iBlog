@@ -1,6 +1,8 @@
-<div class="nav">
-  <app-nav></app-nav>
-  <div class="ui-login">
+<div class="home-main">
+  <div class="nav">
+    <app-nav></app-nav>
+  </div>
+  <div class="login" *ngIf="isLogin">
     <app-login></app-login>
   </div>
 </div>
