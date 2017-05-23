@@ -1,4 +1,5 @@
 <div class="login">
+    <input type="image" src="../assets/image/close.png" width="40px" height="40px" (click)="onCloseClick($event)" class="onClose">
     <img src="../assets/image/login.jpg" class="img-rounded" width="400px" height="600px">
     <div class="from">
         <form class="form-group" (submit)="Login($event)">
@@ -9,9 +10,12 @@
             <div class="form-group has-success" [ngClass]="{'form-group has-error':isRight}" id="pw">
                 <label class="control-label">请输入密码：</label>
                 <input type="password" class="form-control" id="password">
+                <span class="tips" *ngIf="isRight"><img src="../assets/image/error.png" width="20px" height="20px">用户名或密码输入不正确！</span>
             </div>
-            <button type="reset" class="btn btn-success" id="reset">重置</button>
+            <button type="reset" class="btn btn-success" id="reset" (click)="resetClick($event)">重置</button>
             <button type="submit" class="btn btn-success" id="submit">登陆</button>
+            <div>
+            </div>
         </form>
     </div>
 </div>

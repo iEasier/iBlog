@@ -1,6 +1,6 @@
 /*全局CSS设置*/
 /*1、清除所有的标记的内外边距*/
-    body,ul,li,a,img,p,input{ margin:0; padding:0; }
+    body,ul,li,a,img,p,input{ margin:0; padding:0;}
 /*2、去除项目符号或编号前面的符号*/
     ul,ol,li{ list-style:none; }
 /*3、全局链接效果*/

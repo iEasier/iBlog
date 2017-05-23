@@ -3,6 +3,12 @@
         "userLogin": "User Login"
     },
     "userSet": {
-        "switchLanguage": "Switch Language"
+        "switchLanguage": "Switch Language",
+        "uploadavatar": "Upload Avatar",
+        "modifyName": "Modify Your Name",
+        "modifySex": "Modify Your Sex"
+    },
+    "searchSet": {
+        "searchTips": "What do you want to search for?"
     }
 }

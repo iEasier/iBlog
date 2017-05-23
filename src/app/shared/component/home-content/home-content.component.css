@@ -1,0 +1,58 @@
+input{
+-webkit-transition: all 0.5s ease-in; -moz-transition:all 0.5s ease-in; transition:all 0.5s ease-in;outline:none;
+}
+input:hover{-webkit-transform:scale(1.08);-moz-transform:scale(1.08);-o-transform:scale(1.08);transform:scale(1.08);
+}
+.ui-login{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+.home-img{
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    z-index: -1;
+}
+.home-img-left{
+    position: absolute;
+    top: 350px;
+    left: 2px;
+}
+.home-img-right{
+    position: absolute;
+    top: 350px;
+    right: 2px;
+}
+.serarch{
+    position: absolute;
+    top: 250px;
+    right: 690px;
+}
+.dotImg0{
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/image/dot.png);
+    position: absolute;
+    top: 580px;
+    right: 830px;
+}
+.dotImg1{
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/image/dot.png);
+    position: absolute;
+    top: 580px;
+    right: 780px;
+}
+.dotImg2{
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/image/dot.png);
+    position: absolute;
+    top: 580px;
+    right: 730px;
+}
+.dot-selectImg{
+    background-image: url(./assets/image/dot-select.png);
+}

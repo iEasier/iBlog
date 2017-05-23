@@ -20,10 +20,24 @@
     top: 50%;
     left: 20%;
     width: 100px; 
+    outline:none;
 }
 #submit{
     position: absolute;
     top: 50%;
     left: 52%;
     width: 100px;  
+    outline:none;
+}
+.onClose{
+    position: absolute;
+    top: -2%;
+    left: 89%;
+    outline:none;
+}
+.tips{
+    position: absolute;
+    top: 111%;
+    font-weight:bold;
+	color:#ff9955;
 }

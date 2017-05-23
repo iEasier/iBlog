@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
+import { FileUploadModule } from 'ng2-file-upload';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './shared/component/login/login.component';
@@ -11,6 +12,10 @@ import { NavComponent } from './shared/component/nav/nav.component';
 import { LoginService } from './shared/service';
 import { SettingComponent } from './shared/component/setting/setting.component';
 import { WelcomeComponent } from './shared/component/welcome/welcome.component';
+import { SearchComponent } from './shared/component/search/search.component';
+import { HomeContentComponent } from './shared/component/home-content/home-content.component';
+import { WriteNoteComponent } from './shared/component/write-note/write-note.component';
+import { ShowPhotosComponent } from './shared/component/show-photos/show-photos.component';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -24,12 +29,17 @@ export function createTranslateLoader(http: Http) {
     NavComponent,
     NavComponent,
     SettingComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SearchComponent,
+    HomeContentComponent,
+    WriteNoteComponent,
+    ShowPhotosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    FileUploadModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
