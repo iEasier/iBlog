@@ -5,30 +5,38 @@ input:hover{-webkit-transform:scale(1.15);-moz-transform:scale(1.15);-o-transfor
 }
 .head-photo input:hover{box-shadow:0 2px 10px 2px #2d8be9;-webkit-transform:scale(1.15);-moz-transform:scale(1.15);-o-transform:scale(1.15);transform:scale(1.15);
 }
+.nav-main{
+    background-image: url(./assets/image/timg.jpg);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75px;
+}
 .goHome{
     position: absolute;
-    top: 2%;
-    left: 5%;
+    top: 15px;
+    left: 40px;
 }
 .writeNote{
     position: absolute;
-    top: 2%;
-    left: 10%;
+    top: 15px;
+    left: 120px;
 }
 .photos{
     position: absolute;
-    top: 2.5%;
-    left: 15%;
+    top: 20px;
+    left: 200px;
 }
 .head-photo{
     position: absolute;
-    top: 2%;
+    top: 15px;
     right: 10%;
 }
 .login{
     position: absolute;
-    top: 85px;
-    left: 540px;
+    top: 120px;
+    right: 60%;
     z-index: 999;
 }
 .img-rounded{
@@ -36,16 +44,18 @@ input:hover{-webkit-transform:scale(1.15);-moz-transform:scale(1.15);-o-transfor
 }
 .personal{
     position: absolute;
-    top: 78px;
-    right: 396px;
+    top: 85px;
+    right: 21%;
     z-index: 999;
 }
 .nav{
     outline:none;
+    width: 100%;
+    height: 75px;;
 }
 .userName{
     border-bottom:#000000 solid 1px;
     position: absolute;
-    top: 5%;
+    top: 40px;
     right: 5%;
 }

@@ -6,7 +6,7 @@
     <input type="image" src="../assets/image/right.png" width="100px;" height="100px;" (click)="onRight($event)">
   </div>
   <div class="home-img">
-    <img src="{{homeImg}}">
+    <!--<img src="{{homeImg}}">-->
     <div class="dotImg" *ngFor="let HomeImg of homeImgArray;let i = index;">
       <div class="dotImg{{i}}" [ngClass]="{'dot-selectImg':homeImg===HomeImg}">
       </div>

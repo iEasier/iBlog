@@ -8,12 +8,15 @@ input:hover{-webkit-transform:scale(1.08);-moz-transform:scale(1.08);-o-transfor
     top: 40px;
     left: 50px;
 }
-.home-img{
+.homeContent{
+    background-image: url(./assets/image/timg.jpg);
     position: absolute;
     top: 90px;
     left: 0px;
-    z-index: -1;
+    width: 100%;
+    height: 880px;
 }
+
 .home-img-left{
     position: absolute;
     top: 350px;
@@ -27,7 +30,7 @@ input:hover{-webkit-transform:scale(1.08);-moz-transform:scale(1.08);-o-transfor
 .serarch{
     position: absolute;
     top: 250px;
-    right: 690px;
+    right: 45%;
 }
 .dotImg0{
     width: 20px;
@@ -35,7 +38,7 @@ input:hover{-webkit-transform:scale(1.08);-moz-transform:scale(1.08);-o-transfor
     background-image: url(./assets/image/dot.png);
     position: absolute;
     top: 580px;
-    right: 830px;
+    right: 1000px;
 }
 .dotImg1{
     width: 20px;
@@ -43,7 +46,7 @@ input:hover{-webkit-transform:scale(1.08);-moz-transform:scale(1.08);-o-transfor
     background-image: url(./assets/image/dot.png);
     position: absolute;
     top: 580px;
-    right: 780px;
+    right: 950px;
 }
 .dotImg2{
     width: 20px;
@@ -51,7 +54,7 @@ input:hover{-webkit-transform:scale(1.08);-moz-transform:scale(1.08);-o-transfor
     background-image: url(./assets/image/dot.png);
     position: absolute;
     top: 580px;
-    right: 730px;
+    right: 900px;
 }
 .dot-selectImg{
     background-image: url(./assets/image/dot-select.png);
