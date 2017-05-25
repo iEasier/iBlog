@@ -1,15 +1,12 @@
-<div class="homeContent">
+<div class="homeContent" id="homeContent">
   <div class="home-img-left">
     <input type="image" src="../assets/image/left.png" width="100px;" height="100px;" (click)="onLeft($event)">
   </div>
   <div class="home-img-right">
     <input type="image" src="../assets/image/right.png" width="100px;" height="100px;" (click)="onRight($event)">
   </div>
-  <div class="home-img">
-    <!--<img src="{{homeImg}}">-->
-    <div class="dotImg" *ngFor="let HomeImg of homeImgArray;let i = index;">
-      <div class="dotImg{{i}}" [ngClass]="{'dot-selectImg':homeImg===HomeImg}">
-      </div>
+  <div class="dotImg" *ngFor="let HomeImg of homeImgArray;let i = index;">
+    <div class="dotImg{{i}}" [ngClass]="{'dot-selectImg':homeImg===HomeImg}">
     </div>
   </div>
   <div class="serarch">

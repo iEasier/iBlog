@@ -3,7 +3,7 @@ import { sendRequest } from '../interface-api';
 import { Http } from '@angular/http';
 @Injectable()
 export class LoginService {
-  private loginUrl = 'itv-html/script/iTvControl.js';
+  private loginUrl = 'DemoService/SayHelloPort?wsdl';
   constructor(private http: Http) { }
   getLogin() {
     let demo = 'sss';

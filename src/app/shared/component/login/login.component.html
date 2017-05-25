@@ -1,6 +1,5 @@
-<div class="login">
+<div id="login" style="background-image: url(../assets/image/timg-2.jpg)" class="img-rounded" width="400px" height="600px">
     <input type="image" src="../assets/image/close.png" width="40px" height="40px" (click)="onCloseClick($event)" class="onClose">
-    <img src="../assets/image/login.jpg" class="img-rounded" width="400px" height="600px">
     <div class="from">
         <form class="form-group" (submit)="Login($event)">
             <div class="form-group has-success" [ngClass]="{'form-group has-error':isRight}" id="name">
