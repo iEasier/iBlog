@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
-import { FileUploadModule } from 'ng2-file-upload';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './shared/component/login/login.component';
@@ -39,7 +38,6 @@ export function createTranslateLoader(http: Http) {
     BrowserModule,
     FormsModule,
     HttpModule,
-    FileUploadModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),

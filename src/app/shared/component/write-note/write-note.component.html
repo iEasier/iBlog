@@ -1,3 +1,16 @@
-<p>
-  write-note works!
-</p>
+<div class="writeNote" style="background-image:url(./assets/image/writeNodeBackground.jpg)">
+    <div class="nav-write" id="tops">
+        <div *ngFor="let writeNote of writeNotes;let index = i">
+            <li class="li-top">{{writeNote.topName}}</li>
+            <button class="btn-sm img-rounded" style="display:none">删除</button>
+        </div>
+    </div>
+    <div class="save">
+        <strong class="name">主题名</strong>
+        <input type="text" class="img-rounded" id="topName" placeholder="未命名的主题！">
+        <input type="image" src="./assets/image/save.png" class="img-rounded" id="save" (click)="saveWrite($event)">
+    </div>
+    <div class="input-main">
+        <textarea class="write"></textarea>
+    </div>
+</div>
