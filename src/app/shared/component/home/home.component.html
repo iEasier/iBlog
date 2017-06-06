@@ -1,14 +1,14 @@
 <div class="home-main">
-  <div class="nav">
+  <div class="home-nav">
     <app-nav (turnPage)="turnPage($event)"></app-nav>
   </div>
   <div class="home-content" *ngIf="needShowHome">
     <app-home-content></app-home-content>
   </div>
-  <div class="home-content" *ngIf="needShowWriteNote">
-
+  <div class="write-content" *ngIf="needShowWriteNote">
+    <app-write-note></app-write-note>
   </div>
-  <div class="home-content" *ngIf="needShowPhotos">
-
+  <div class="photos-content" *ngIf="needShowPhotos">
+    <app-show-photos></app-show-photos>
   </div>
 </div>

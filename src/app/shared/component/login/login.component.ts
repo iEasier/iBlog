@@ -36,12 +36,12 @@ export class LoginComponent implements OnInit {
     const password = $('#password').val();
     // this.loginService.getLogin();
     if ('qqq' === password && 'qqq' === username) {
-      this.OnClose.emit(CLOSE_OBJ);
-      this.loginSuc.emit(true);    // this name from mysql;
       const userName = 'IT丶小人物';
-      const userHeadPortrait = '../assets/image/2.jpeg';
+      const userHeadPortrait = '../assets/image/user.jpg';
       sessionStorage.setItem('userHeadPortrait', userHeadPortrait);
       sessionStorage.setItem('userName', userName);
+      this.OnClose.emit(CLOSE_OBJ);
+      this.loginSuc.emit(true);    // this name from mysql;
     } else {
       this.isRight = true;
     }

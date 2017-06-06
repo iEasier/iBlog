@@ -12,19 +12,19 @@ export class HomeContentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('#homeContent').css({ 'background-image': 'url(' + this.homeImg + ')' });
+    $('#homeContent').css({ 'background': 'url(' + this.homeImg + ') no-repeat' });
   }
   onLeft() {
     if (this.index > 0) {
       this.homeImg = iBlogConst.HOME_IMG[this.index - 1];
-    $('#homeContent').css({ 'background-image': 'url(' + this.homeImg + ')' });
+    $('#homeContent').css({ 'background': 'url(' + this.homeImg + ') no-repeat' });
       this.index--;
     }
   }
   onRight() {
     if (this.index < iBlogConst.HOME_IMG.length - 1) {
       this.homeImg = iBlogConst.HOME_IMG[this.index + 1];
-    $('#homeContent').css({ 'background-image': 'url(' + this.homeImg + ')' });
+    $('#homeContent').css({ 'background': 'url(' + this.homeImg + ') no-repeat' });
       this.index++;
     }
   }
