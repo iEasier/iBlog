@@ -3,11 +3,9 @@ import { sendRequest } from '../interface-api';
 import { Http } from '@angular/http';
 @Injectable()
 export class LoginService {
-  private loginUrl = 'DemoService/SayHelloPort?wsdl';
+  private loginUrl = 'iBlog/Authentication';
   constructor(private http: Http) { }
-  getLogin() {
-    let demo = 'sss';
-    demo += 'in';
-    return sendRequest(this.loginUrl, this.http);
+  getLogin(request) {
+    return sendRequest(this.loginUrl, this.http, request);
   }
 }
