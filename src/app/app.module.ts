@@ -15,6 +15,7 @@ import { SearchComponent } from './shared/component/search/search.component';
 import { HomeContentComponent } from './shared/component/home-content/home-content.component';
 import { WriteNoteComponent } from './shared/component/write-note/write-note.component';
 import { ShowPhotosComponent } from './shared/component/show-photos/show-photos.component';
+import { Ng2Echarts } from 'ng2-echarts';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -32,7 +33,8 @@ export function createTranslateLoader(http: Http) {
     SearchComponent,
     HomeContentComponent,
     WriteNoteComponent,
-    ShowPhotosComponent
+    ShowPhotosComponent,
+    Ng2Echarts
   ],
   imports: [
     BrowserModule,

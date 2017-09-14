@@ -38,8 +38,8 @@ export class LoginComponent implements OnInit {
       username: username,
       password: password
     };
-    this.loginService.getLogin(request).then((result) => {
-      if (result.retcode === 0) {
+    this.loginService.getLogin(request).then((result: any) => {
+      if (result.retcode === '0') {
         const userInfo = result.userinfo;
         const userHeadPortrait = '../assets/image/user.jpg';
         sessionStorage.setItem('userHeadPortrait', userInfo.head_photo ? userInfo.head_photo : userHeadPortrait);
@@ -49,8 +49,7 @@ export class LoginComponent implements OnInit {
       } else {
         this.isRight = true;
       }
-    }
-    );
+    });
 
   }
   onCloseClick() {

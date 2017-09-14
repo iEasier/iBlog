@@ -10,16 +10,11 @@ export function sendRequest(url: string, http?: Http, request?: any) {
         'Access-Control-Allow-Origin': '*'
     });
     const options = new RequestOptions({ headers: headers });
-
     return http.post(URL, body, options)
         .map(res => {
             return res.json();
         }).toPromise().then(resp => {
-            if (resp.retcode === 0) {
-                return Promise.resolve(resp);
-            } else {
-                return Promise.reject(resp);
-            }
+            return Promise.resolve(resp);
         });
 
 }
