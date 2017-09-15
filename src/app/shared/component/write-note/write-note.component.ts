@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WriteNoteComponent implements OnInit {
   private writeNotes = [];
+  private init = 0;
   constructor() { }
 
   ngOnInit() {
+    if (this.init < 100) {
+      this.init += 1;
+      setTimeout(() => {
+        const process = this.init + '%';
+        if (this.init > 50) {
+          $('#progress').css('width', process);
+          $('#progress').addClass('progress-bar progress-bar-danger');
+        } else {
+          $('#progress').css('width', process);
+        }
+        this.ngOnInit();
+      }, 100);
+    }
   }
   saveWrite() {
     // Some Option to do ...
