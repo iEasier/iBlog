@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { LoginService } from '../../service';
+import { CommonService } from '../../service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   private tips: String = '用户名';
   private needHelp: Boolean = false;
   constructor(
-    private loginService: LoginService) {
+    private loginService: CommonService) {
 
   }
 

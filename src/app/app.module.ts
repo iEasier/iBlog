@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './shared/component/login/login.component';
 import { HomeComponent } from './shared/component/home/home.component';
 import { NavComponent } from './shared/component/nav/nav.component';
-import { LoginService } from './shared/service';
+import { CommonService } from './shared/service';
 import { SettingComponent } from './shared/component/setting/setting.component';
 import { WelcomeComponent } from './shared/component/welcome/welcome.component';
 import { SearchComponent } from './shared/component/search/search.component';
@@ -46,7 +46,7 @@ export function createTranslateLoader(http: Http) {
       deps: [Http]
     }),
   ],
-  providers: [LoginService],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

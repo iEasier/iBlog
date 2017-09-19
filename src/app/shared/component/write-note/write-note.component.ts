@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CommonService } from '../../service';
 @Component({
   selector: 'app-write-note',
   templateUrl: './write-note.component.html',
@@ -8,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class WriteNoteComponent implements OnInit {
   private writeNotes = [];
   private init = 0;
-  constructor() { }
+  constructor(
+    private commonService: CommonService
+  ) {
+    // this.commonService.getWriteNote({ username: 'fangliang' });
+    this.commonService.getTest({ username: 'fangliang' }).then(error => {
+
+      let s = error;
+    });
+  }
 
   ngOnInit() {
     if (this.init < 100) {
@@ -39,4 +47,5 @@ export class WriteNoteComponent implements OnInit {
     $('#topName').val('');
     $('.write').val('');
   }
+
 }

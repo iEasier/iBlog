@@ -1,2 +1,2 @@
-export * from './login.service';
+export * from './common.service';
 export * from './get-user-info.service';

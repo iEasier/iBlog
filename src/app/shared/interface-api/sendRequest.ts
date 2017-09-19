@@ -18,3 +18,18 @@ export function sendRequest(url: string, http?: Http, request?: any) {
         });
 
 }
+export function sendGetRequest(url: string, http?: Http) {
+    const URL = Config.url + url;
+    const headers = new Headers({
+        'Content-Type': 'application/json;charset=utf-8',
+        'Access-Control-Allow-Origin': '*'
+    });
+    const options = new RequestOptions({ headers: headers });
+    return http.get(URL, options)
+        .map(res => {
+            return res.json();
+        }).toPromise().then(resp => {
+            return Promise.resolve(resp);
+        });
+
+}
