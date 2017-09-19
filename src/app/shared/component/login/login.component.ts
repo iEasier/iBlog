@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   private tips: String = '用户名';
   private needHelp: Boolean = false;
   constructor(
-    private loginService: CommonService) {
+    private commonService: CommonService) {
 
   }
 
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
       username: username,
       password: password
     };
-    this.loginService.getLogin(request).then((result: any) => {
+    this.commonService.getLogin(request).then((result: any) => {
       if (result.retcode === '0') {
         const userInfo = result.userinfo;
         const userHeadPortrait = '../assets/image/user.jpg';
@@ -61,5 +61,16 @@ export class LoginComponent implements OnInit {
   }
   resetClick() {
     this.isRight = false;
+  }
+  regClick() {
+    const request = {
+      username: 'Fliang',
+      password: '123',
+      nick: '_.Xiao',
+      head_photo: './assets/image/iBlog.png',
+      telephone: '15855246580',
+      address: '南京'
+    };
+    this.commonService.addUserInfo(request);
   }
 }
