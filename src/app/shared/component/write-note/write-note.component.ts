@@ -11,11 +11,7 @@ export class WriteNoteComponent implements OnInit {
   constructor(
     private commonService: CommonService
   ) {
-    // this.commonService.getWriteNote({ username: 'fangliang' });
-    this.commonService.getTest({ username: 'fangliang' }).then(error => {
-
-      let s = error;
-    });
+    this.commonService.getWriteNote({ username: 'fangliang' });
   }
 
   ngOnInit() {

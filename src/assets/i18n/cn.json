@@ -1,6 +1,8 @@
 {
     "userLogin": {
-        "userLogin": "User Login"
+        "userLogin": "User Login",
+        "username":"Username",
+        "password":"Password"
     },
     "userSet": {
         "switchLanguage": "Switch Language",

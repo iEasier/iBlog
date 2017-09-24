@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CommonService } from '../../service';
+import { TranslateService } from 'ng2-translate';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,23 +10,19 @@ export class LoginComponent implements OnInit {
   @Output() OnClose: EventEmitter<any> = new EventEmitter<any>();
   @Output() loginSuc: EventEmitter<any> = new EventEmitter<any>();
   private areas = ['安徽省', '江苏省'];
-  private isRight: Boolean = false;
-  private tips: String = '用户名';
-  private needHelp: Boolean = false;
+  // 展示错误信息
+  private showErrorTip: Boolean = false;
+  private username = 'username';
+  private password = 'password';
   constructor(
-    private commonService: CommonService) {
+    private commonService: CommonService,
+    private translate: TranslateService) {
 
   }
 
   ngOnInit() {
 
 
-  }
-  showHelp() {
-    this.needHelp = true;
-  }
-  checkName() {
-    this.needHelp = false;
   }
   Login() {
     const CLOSE_OBJ = {
@@ -42,15 +39,17 @@ export class LoginComponent implements OnInit {
       if (result.retcode === '0') {
         const userInfo = result.userinfo;
         const userHeadPortrait = '../assets/image/user.jpg';
-        sessionStorage.setItem('userHeadPortrait', userInfo.head_photo ? userInfo.head_photo : userHeadPortrait);
+        sessionStorage.setItem('userHeadPortrait', userInfo.headPhoto ? userInfo.headPhoto : userHeadPortrait);
         sessionStorage.setItem('userName', userInfo.nick);
         this.OnClose.emit(CLOSE_OBJ);
         this.loginSuc.emit(true);    // this name from mysql;
       } else {
-        this.isRight = true;
+        this.showErrorTip = true;
       }
     });
-
+  }
+  clearErrorTip() {
+    this.showErrorTip = false;
   }
   onCloseClick() {
     const CLOSE_OBJ = {
@@ -60,14 +59,14 @@ export class LoginComponent implements OnInit {
     this.OnClose.emit(CLOSE_OBJ);
   }
   resetClick() {
-    this.isRight = false;
+    this.showErrorTip = false;
   }
   regClick() {
     const request = {
       username: 'Fliang',
       password: '123',
       nick: '_.Xiao',
-      head_photo: './assets/image/iBlog.png',
+      headPhoto: './assets/image/iBlog.png',
       telephone: '15855246580',
       address: '南京'
     };

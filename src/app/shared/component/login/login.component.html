@@ -2,14 +2,14 @@
     <input type="image" src="../assets/image/close.png" width="40px" height="40px" (click)="onCloseClick($event)" class="onClose">
     <div class="from">
         <form class="form-group" (submit)="Login($event)">
-            <div class="form-group has-success" [ngClass]="{'form-group has-error':isRight}" id="name">
-                <label class="control-label">{{tips}}</label>
-                <input type="username" class="form-control" id="username" (blur)="checkName($event)" (focus)="showHelp($event)">
+            <div class="form-group has-success" [ngClass]="{'form-group has-error':showErrorTip}" id="name">
+                <label class="control-label">{{'userLogin.username' | translate}}</label>
+                <input type="text" class="form-control inputCss" id="username" autocomplete="off" (focus)="clearErrorTip($event)">
             </div>
-            <div class="form-group has-success" [ngClass]="{'form-group has-error':isRight}" id="pw">
-                <label class="control-label">请输入密码：</label>
-                <input type="password" class="form-control" id="password">
-                <span class="tips" *ngIf="isRight"><img src="../assets/image/error.png" width="20px" height="20px">用户名或密码输入不正确！</span>
+            <div class="form-group has-success" [ngClass]="{'form-group has-error':showErrorTip}" id="pw">
+                <label class="control-label">{{'userLogin.password' | translate}}</label>
+                <input type="password" class="form-control inputCss" id="password" autocomplete="off" (focus)="clearErrorTip($event)">
+                <span class="tips" *ngIf="showErrorTip"><img src="../assets/image/error.png" width="20px" height="20px">用户名或密码输入不正确！</span>
             </div>
             <button type="reset" class="btn btn-success" id="reset" (click)="resetClick($event)">重置</button>
             <button type="submit" class="btn btn-success" id="submit">登陆</button>

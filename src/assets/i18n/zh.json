@@ -1,6 +1,8 @@
 {
     "userLogin": {
-        "userLogin": "用户登录"
+        "userLogin": "用户登录",
+        "username":"用户名",
+        "password":"用户密码"
     },
     "userSet": {
         "switchLanguage": "切换显示语言",
