@@ -1,6 +1,7 @@
 .writeNote{
     width: 100%;
     height: 100%;
+    background-image:url(./assets/image/writeNodeBackground.jpg);
 }
 .input-main{
     width: 80%;
@@ -55,6 +56,11 @@
     height: 40px;
     color: purple;
     font-size: 30px;
+}
+.navbarShow{
+    position: absolute;
+    top: 100px;
+    width: 100%;
 }
 #tops{
     outline: none;

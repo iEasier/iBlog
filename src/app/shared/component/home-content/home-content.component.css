@@ -9,46 +9,12 @@ input:hover{-webkit-transform:scale(1.08);-moz-transform:scale(1.08);-o-transfor
     height: 100%;
 }
 
-.home-img-left{
-    position: absolute;
-    top: 350px;
-    left: 2px;
-}
-.home-img-right{
-    position: absolute;
-    top: 350px;
-    right: 2px;
-}
 .serarch{
     position: absolute;
     top: 250px;
     right: 45%;
 }
-.dotImg0{
-    width: 20px;
-    height: 20px;
-    background-image: url(./assets/image/dot.png);
-    position: absolute;
-    top: 580px;
-    right: 55%;
-
-}
-.dotImg1{
-    width: 20px;
-    height: 20px;
-    background-image: url(./assets/image/dot.png);
-    position: absolute;
-    top: 580px;
-    right: 50%;
-}
-.dotImg2{
-    width: 20px;
-    height: 20px;
-    background-image: url(./assets/image/dot.png);
-    position: absolute;
-    top: 580px;
-    right: 45%;
-}
-.dot-selectImg{
-    background-image: url(./assets/image/dot-select.png);
+.showCarousel{
+    height: 100%;
+    width: 100%;
 }

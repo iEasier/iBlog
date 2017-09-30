@@ -8,7 +8,7 @@
   </div>
   <div class="modifySex">
     <label class="modifySex-label">修改性别：</label>
-    <select class="btn btn-success" id="modifySex-input" >
+    <select class="btn btn-success" id="modifySex-input">
       <option>男</option>
       <option>女</option>
     </select>
@@ -16,4 +16,5 @@
   <!--<input class="file" type="file" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" />-->
   <button class="btn btn-success" (click)="upLoad($event)" id="upLoad">{{'userSet.uploadavatar' |translate}}</button>
   <button class="btn btn-success" (click)="switchLange($event)" id="switchLan">{{'userSet.switchLanguage' |translate}}</button>
+  <button class="btn btn-success loginOut" (click)="onLoginOut($event)">{{'userSet.switchLanguage' |translate}}</button>
 </div>

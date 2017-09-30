@@ -28,7 +28,7 @@ input:hover{-webkit-transform:scale(1.15);-moz-transform:scale(1.15);-o-transfor
 .head-photo{
     position: absolute;
     top: 15px;
-    right: 10%;
+    left: 1320px;
     width: 130px;
 }
 .login{
@@ -59,4 +59,11 @@ input:hover{-webkit-transform:scale(1.15);-moz-transform:scale(1.15);-o-transfor
     width: 10rem;
     height: 2rem;
     overflow: hidden;
+}
+.white{
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    top: 80px;
+    background : url(./assets/image/white.png);
 }

@@ -39,4 +39,7 @@ export class NavComponent implements OnInit {
   goPage(page) {
     this.turnPage.emit(page);
   }
+  loginOut(isLogin) {
+    this.loginSuc(isLogin);
+  }
 }

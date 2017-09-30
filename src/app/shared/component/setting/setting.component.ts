@@ -7,6 +7,7 @@ import { TranslateService } from 'ng2-translate';
 })
 export class SettingComponent implements OnInit {
   @Output() OnClose: EventEmitter<any> = new EventEmitter<any>();
+  @Output() loginOut: EventEmitter<any> = new EventEmitter<any>();
   @Input() userHeadPortrait: String;
   private languages = [];
   private defaultLange: String;
@@ -40,5 +41,8 @@ export class SettingComponent implements OnInit {
       boolean: false
     };
     this.OnClose.emit(closeObj);
+  }
+  onLoginOut() {
+    this.loginOut.emit(false);
   }
 }
