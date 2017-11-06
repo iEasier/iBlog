@@ -3,19 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
-
+import { HomeModule } from './component/home';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './shared/component/login/login.component';
-import { HomeComponent } from './shared/component/home/home.component';
-import { NavComponent } from './shared/component/nav/nav.component';
-import { CommonService } from './shared/service';
-import { SettingComponent } from './shared/component/setting/setting.component';
-import { WelcomeComponent } from './shared/component/welcome/welcome.component';
-import { SearchComponent } from './shared/component/search/search.component';
-import { HomeContentComponent } from './shared/component/home-content/home-content.component';
-import { WriteNoteComponent } from './shared/component/write-note/write-note.component';
-import { ShowPhotosComponent } from './shared/component/show-photos/show-photos.component';
-import { Ng2Echarts } from 'ng2-echarts';
+import { CommonService } from './service';
+import { WelcomeComponent } from './component/welcome/welcome.component';
+import { HashLocationStrategy, Location, LocationStrategy } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { Routes } from './const';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -23,30 +17,24 @@ export function createTranslateLoader(http: Http) {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    HomeComponent,
-    NavComponent,
-    NavComponent,
-    NavComponent,
-    SettingComponent,
-    WelcomeComponent,
-    SearchComponent,
-    HomeContentComponent,
-    WriteNoteComponent,
-    ShowPhotosComponent,
-    Ng2Echarts
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule,
+    HomeModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
       deps: [Http]
     }),
+    RouterModule.forRoot(Routes)
   ],
-  providers: [CommonService],
-  bootstrap: [AppComponent]
+  providers: [CommonService,
+    Location, { provide: LocationStrategy, useClass: HashLocationStrategy }],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
