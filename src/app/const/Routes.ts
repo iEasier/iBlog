@@ -1,7 +1,5 @@
-import { LoginComponent } from '../component/login';
+import { LoginComponent, SettingComponent } from '../component/userinfo';
 import { HomeComponent } from '../component/home';
-import { ShowPhotosComponent } from '../component/show-photos';
-import { WriteNoteComponent } from '../component/write-note';
 export const Routes = [
     {
         path: '',
@@ -17,11 +15,7 @@ export const Routes = [
         component: HomeComponent
     },
     {
-        path: 'WriteNote',
-        component: WriteNoteComponent
-    },
-    {
-        path: 'Photos',
-        component: ShowPhotosComponent
+        path: 'Setting',
+        component: SettingComponent
     }
 ];

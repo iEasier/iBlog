@@ -49,6 +49,7 @@ export class CommonService {
   }
 
   setTurnPage(path: string, params?: {}) {
-    this.router.navigate([path], params);
+    this.getParams = params;
+    this.router.navigate([path], { skipLocationChange: true });
   }
 }

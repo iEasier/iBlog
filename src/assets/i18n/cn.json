@@ -1,8 +1,12 @@
 {
     "userLogin": {
         "userLogin": "User Login",
-        "username":"Username",
-        "password":"Password"
+        "username": "Username",
+        "password": "Password",
+        "errorUserName": "Please check your UserName",
+        "errorNullUserName": "The user name cannot be Empty",
+        "errorNullPassword": "The user password can not be Empty",
+        "error": "Login failed. Please check your username or password"
     },
     "userSet": {
         "switchLanguage": "Switch Language",

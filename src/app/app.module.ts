@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 import { HomeModule } from './component/home';
+import { UserinfoModule } from './component/userinfo';
 import { AppComponent } from './app.component';
 import { CommonService } from './service';
 import { WelcomeComponent } from './component/welcome/welcome.component';
@@ -25,6 +26,7 @@ export function createTranslateLoader(http: Http) {
     HttpModule,
     RouterModule,
     HomeModule,
+    UserinfoModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),

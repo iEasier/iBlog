@@ -1,0 +1,28 @@
+<div class="login-main">
+    <div>
+        <img src="./assets/image/login_input.png" class="input-main">
+        <div class="from">
+            <div class="form-group has-success" [ngClass]="{'form-group has-error':showErrorTip}" id="name">
+                <input type="text" class="form-control inputCss username" id="username" autocomplete="off" (blur)="checkInput(username)"
+                    (focus)="checkInput('reSetUsername')" value="{{userName}}">
+                <span class="usernameTips" *ngIf="usernameTips.successTip">
+                    <img src="../assets/image/success.png" class="tipsImg">{{usernameTips.message}}</span>
+                <span class="usernameTips" *ngIf="usernameTips.errorTip">
+                    <img src="../assets/image/error.png" class="tipsImg">{{usernameTips.message}}</span>
+            </div>
+
+            <div class="form-group has-success" [ngClass]="{'form-group has-error':showErrorTip}" id="pw">
+                <input type="password" class="form-control inputCss password" id="password" autocomplete="off" (blur)="checkInput(password)"
+                    (focus)="checkInput('reSetPassword')" value="{{passWord}}">
+                <span class="passwordTips" *ngIf="passwordTips.successTip">
+                    <img src="../assets/image/success.png" class="tipsImg">{{passwordTips.message}}</span>
+                <span class="passwordTips" *ngIf="passwordTips.errorTip">
+                    <img src="../assets/image/error.png" class="tipsImg">{{passwordTips.message}}</span>
+            </div>
+            <input type="checkbox" class="checkBox" id="remember" checked="checked" *ngIf="remember">
+            <input type="checkbox" class="checkBox" id="remember" *ngIf="!remember">
+            <button class="submit btn" (click)="Login($event)"></button>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../../service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,15 @@ export class HomeComponent implements OnInit {
   private needShowHome: Boolean = true;
   private needShowWriteNote: Boolean = false;
   private needShowPhotos: Boolean = false;
-  constructor() { }
+  private isLogin: Boolean = false;
+  constructor(
+    private commonService: CommonService
+  ) {
+    this.isLogin = this.commonService.getTurnPage().isLogin;
+    if (!this.isLogin) {
+      this.commonService.setTurnPage('Login');
+    }
+  }
 
   ngOnInit() {
   }

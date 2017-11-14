@@ -40,12 +40,6 @@ input:hover{-webkit-transform:scale(1.15);-moz-transform:scale(1.15);-o-transfor
 .img-rounded{
     outline:none;
 }
-.personal{
-    position: absolute;
-    top: 85px;
-    right: 30%;
-    z-index: 999;
-}
 .nav{
     outline:none;
     width: 100%;

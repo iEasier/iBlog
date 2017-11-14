@@ -1,8 +1,12 @@
 {
     "userLogin": {
         "userLogin": "用户登录",
-        "username":"用户名",
-        "password":"用户密码"
+        "username": "用户名",
+        "password": "用户密码",
+        "errorUserName": "请检查你的用户名",
+        "errorNullUserName": "错误，用户名称不能为空",
+        "errorNullPassword": "错误，用户密码不能为空",
+        "error": "登陆失败，请检查你的用户名或者密码"
     },
     "userSet": {
         "switchLanguage": "切换显示语言",
