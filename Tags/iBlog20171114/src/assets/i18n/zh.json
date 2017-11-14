@@ -1,0 +1,16 @@
+{
+    "userLogin": {
+        "userLogin": "用户登录",
+        "username":"用户名",
+        "password":"用户密码"
+    },
+    "userSet": {
+        "switchLanguage": "切换显示语言",
+        "uploadavatar": "上传头像",
+        "modifyName": "修改昵称",
+        "modifySex": "修改性别"
+    },
+    "searchSet": {
+        "searchTips": "想搜索什么？"
+    }
+}

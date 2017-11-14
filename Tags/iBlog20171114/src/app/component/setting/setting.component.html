@@ -1,0 +1,20 @@
+<div class="setting">
+  <input type="image" src="../assets/image/back.png" (click)="onCloseClick($event)" class="onClose">
+  <input type="image" src="../assets/image/persionDefault.png" class="persionDefault">
+  <input type="image" src="{{userHeadPortrait}}" width="50px" height="50px" id="img-rounded" class="img-rounded">
+  <div class="modifyName">
+    <label class="modifyName-label">修改昵称：</label>
+    <input class="btn btn-success" id="modifyName-input" type="text" placeholder="{{userName}}">
+  </div>
+  <div class="modifySex">
+    <label class="modifySex-label">修改性别：</label>
+    <select class="btn btn-success" id="modifySex-input">
+      <option>男</option>
+      <option>女</option>
+    </select>
+  </div>
+  <!--<input class="file" type="file" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" />-->
+  <button class="btn btn-success" (click)="upLoad($event)" id="upLoad">{{'userSet.uploadavatar' |translate}}</button>
+  <button class="btn btn-success" (click)="switchLange($event)" id="switchLan">{{'userSet.switchLanguage' |translate}}</button>
+  <button class="btn btn-success loginOut" (click)="onLoginOut($event)">{{'userSet.switchLanguage' |translate}}</button>
+</div>

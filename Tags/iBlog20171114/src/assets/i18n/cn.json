@@ -1,0 +1,16 @@
+{
+    "userLogin": {
+        "userLogin": "User Login",
+        "username":"Username",
+        "password":"Password"
+    },
+    "userSet": {
+        "switchLanguage": "Switch Language",
+        "uploadavatar": "Upload Avatar",
+        "modifyName": "Modify Your Name",
+        "modifySex": "Modify Your Sex"
+    },
+    "searchSet": {
+        "searchTips": "What are you looking for ?"
+    }
+}
