@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { iBlogConst } from '../../../const';
+import { iBlogConst } from '../../../shared/const';
 @Component({
   selector: 'app-home-content',
   templateUrl: './home-content.component.html',

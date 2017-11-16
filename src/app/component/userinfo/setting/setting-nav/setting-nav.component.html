@@ -1,3 +1,5 @@
-<p>
-  setting-nav works!
-</p>
+<div class="setting-nav">
+  <div class="nav" *ngFor="let nav of navs">
+    <div class="nav-sub" (click)="OnFocus(nav)" [ngClass]="{'select': isSelect === nav}">{{nav}}</div>
+  </div>
+</div>

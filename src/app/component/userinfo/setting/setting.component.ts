@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { TranslateService } from 'ng2-translate';
-import { CommonService } from '../../../service';
+import { CommonService } from '../../../shared/service';
 @Component({
   selector: 'app-setting',
   templateUrl: './setting.component.html',

@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { iBlogConst } from '../../../const';
-import { CommonService } from '../../../service';
+import { iBlogConst } from '../../../shared/const';
+import { CommonService } from '../../../shared/service';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -28,7 +28,7 @@ export class NavComponent implements OnInit {
    * @memberof NavComponent
    */
   userInfo() {
-    // this.commonService.setTurnPage('Setting', { isLogin: this.isLogin });
+    this.commonService.setTurnPage('Setting', { isLogin: this.isLogin });
   }
   loginSuc() {
     this.userName = sessionStorage.getItem('userName');

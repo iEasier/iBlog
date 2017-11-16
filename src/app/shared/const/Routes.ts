@@ -1,5 +1,5 @@
-import { LoginComponent, SettingComponent } from '../component/userinfo';
-import { HomeComponent } from '../component/home';
+import { LoginComponent, SettingComponent } from '../../component/userinfo';
+import { HomeComponent } from '../../component/home';
 export const Routes = [
     {
         path: '',

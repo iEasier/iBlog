@@ -15,6 +15,8 @@ export function sendRequest(url: string, http?: Http, request?: any) {
             return res.json();
         }).toPromise().then(resp => {
             return Promise.resolve(resp);
+        }, error => {
+            return Promise.reject(error);
         });
 
 }
@@ -30,6 +32,8 @@ export function sendGetRequest(url: string, http?: Http) {
             return res.json();
         }).toPromise().then(resp => {
             return Promise.resolve(resp);
+        }, error => {
+            return Promise.reject(error);
         });
 
 }

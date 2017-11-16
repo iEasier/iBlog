@@ -1,0 +1,86 @@
+.content {
+    width: 600px;
+    height: 480px;
+    background: white;
+}
+
+.content-main {
+    position: relative;
+    top: 40px;
+    width: 500px;
+    height: 400px;
+    left: 50px;
+    border: 1px solid #F4F4F4;
+}
+
+.head {
+    width: 499px;
+    height: 20px;
+    background: #F4F4F4;
+    border-bottom: 1px dashed #F4F4F4;
+}
+
+.headphoto {
+    float: left;
+    position: relative;
+    top: 20px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+}
+
+.headphoto .headImage {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.tips {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center
+}
+
+.baseInfo {
+    float: left;
+    position: relative;
+    top: 20px;
+    left: 60px;
+}
+
+.baseinfo-sub {
+    float: left;
+    height: 40px;
+    overflow: hidden;
+    line-height: 40px;
+    width: 200px;
+}
+.updata{
+    float: left;
+    line-height: 40px;
+    position: relative;
+    right: -60px;
+}
+.updata:hover{
+    color: green;
+    cursor: pointer;
+}
+.dec-main{
+    position: relative;
+    top: 20px;
+    left: 50px;
+    width: 400px;
+    height: 50px;
+}
+.save{
+    position: relative;
+    top: 40px;
+    left: 100px;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    font: 24px;
+    color: white;
+    outline: none !important;
+} 

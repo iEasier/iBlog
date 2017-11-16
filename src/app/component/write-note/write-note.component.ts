@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonService } from '../../service';
+import { CommonService } from '../../shared/service';
 @Component({
   selector: 'app-write-note',
   templateUrl: './write-note.component.html',

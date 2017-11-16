@@ -6,11 +6,11 @@ import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-tra
 import { HomeModule } from './component/home';
 import { UserinfoModule } from './component/userinfo';
 import { AppComponent } from './app.component';
-import { CommonService } from './service';
+import { CommonService } from './shared/service';
 import { WelcomeComponent } from './component/welcome/welcome.component';
 import { HashLocationStrategy, Location, LocationStrategy } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Routes } from './const';
+import { Routes } from './shared/const';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');

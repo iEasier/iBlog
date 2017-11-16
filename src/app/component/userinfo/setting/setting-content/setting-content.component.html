@@ -1,3 +1,21 @@
-<p>
-  setting-content works!
-</p>
+<div class="setting-content">
+  <div class="content">
+    <div class="content-main">
+      <div class="head"></div>
+      <div class="headphoto">
+        <img class="headImage" src="./assets/image/1.jpg">
+        <div class="tips">修改头像</div>
+      </div>
+      <div class="baseInfo">
+        <div *ngFor="let baseinfo of baseinfos">
+          <div class="baseinfo-sub">{{baseinfo.name}} : {{baseinfo.value}}</div>
+          <div class="updata">修改</div>
+        </div>
+      </div>
+      <div>
+        <textarea class="dec-main"></textarea>
+        <button class="btn btn-success save">保存</button>
+      </div>
+    </div>
+  </div>
+</div>

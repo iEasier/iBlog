@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
-import { sendRequest, sendGetRequest } from '../interface-api';
+import { sendRequest, sendGetRequest } from '../interface-Api';
 import { Http } from '@angular/http';
+import { ActivatedRoute, Router } from '@angular/router';
 @Injectable()
 export class CommonService {
   private loginUrl = 'iBlog/Authentication';
   private getWriteNoteUrl = 'iBlog/getWriteNote';
   private getTestUrl = 'iBlog/Test';
   private addUserInfoUrl = 'iBlog/AddUserInfo';
-  constructor(private http: Http) { }
+  private getParams: any;
+  constructor(
+    private http: Http,
+    private Router: Router,
+    private activatedRoute: ActivatedRoute,
+    private router: Router) {
+    this.getParams = this.activatedRoute.snapshot.params;
+  }
 
   /**
    * 登陆接口
@@ -32,5 +40,16 @@ export class CommonService {
    */
   getTest(request) {
     return sendGetRequest(this.getTestUrl, this.http);
+  }
+  /**
+  * 跳转页面
+  */
+  getTurnPage() {
+    return this.getParams;
+  }
+
+  setTurnPage(path: string, params?: {}) {
+    this.getParams = params;
+    this.router.navigate([path], { skipLocationChange: true });
   }
 }

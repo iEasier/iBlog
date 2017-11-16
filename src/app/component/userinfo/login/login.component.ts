@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { CommonService } from '../../../service';
+import { CommonService } from '../../../shared/service';
 import { TranslateService } from 'ng2-translate';
 
 const CHECK_INPUT = {
